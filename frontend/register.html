@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Prismatask</title>
+
+  <link rel="stylesheet" href="css/estilo.css" />
+  <link rel="stylesheet" href="css/acessibilidade.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.0/open-dyslexic.min.css" />
+</head>
+
+<body>
+  <main class="login-screen">
+    <section class="branding" aria-label="Identidade visual">
+      <img src="assets/logo-prismatask.png" alt="Logo Prismatask" class="logo" />
+      <h1 class="app-name">prismatask</h1>
+      <p class="tagline">Seu gerenciador de tarefas pessoal</p>
+    </section>
+
+    <section class="login-form" aria-label="Formulário de cadastro">
+      <form id="form-register" aria-describedby="instrucoes-cadastro" novalidate>
+        <h2 id="instrucoes-cadastro">Criar conta</h2>
+
+        <label for="email-register">E-mail</label>
+        <input type="email" id="email-register" name="email" required autocomplete="email" />
+
+        <label for="password-register">Senha</label>
+        <input type="password" id="password-register" name="senha" required minlength="8" autocomplete="new-password" />
+
+        <label for="confirm-password">Confirmar senha</label>
+        <input type="password" id="confirm-password" name="confirmar" required minlength="8" />
+
+        <button type="submit">Salvar</button>
+
+     
+        <button id="btn-google" type="button" class="btn-google" aria-label="Cadastrar com Google">
+          <svg width="18" height="18" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.9 0 6.6 1.6 8.1 2.9l6-5.8C35.5 3.5 30.2 1.5 24 1.5 14.9 1.5 7.4 6.8 4 14.1l7.1 5.5C12.3 14.2 17.6 9.5 24 9.5z"/>
+            <path fill="#34A853" d="M46.5 24.5c0-1.5-.1-2.5-.3-3.7H24v7h12.9c-.6 3.3-2.8 6-6 7.7l6.1 4.7C44.5 37.3 46.5 31.6 46.5 24.5z"/>
+            <path fill="#4A90E2" d="M11.1 28.9A14.7 14.7 0 0110 24.5c0-1.6.3-3 1.1-4.4L4 14.1C1.4 18.8 0 23.9 0 29.5c0 5.6 1.4 10.7 4 15.4l7.1-5.5z"/>
+            <path fill="#FBBC05" d="M24 46.5c6 0 11-2 14.6-5.5l-7.1-5.5c-2 1.4-4.6 2.4-7.5 2.4-6.4 0-11.7-4.7-13.9-11.1L4 33.9C7.4 41.2 14.9 46.5 24 46.5z"/>
+          </svg>
+          <span>Cadastrar com Google</span>
+        </button>
+
+        <p id="oauth-error" aria-live="assertive" class="mensagem-erro"></p>
+
+        <p id="mensagem" aria-live="assertive" class="mensagem-erro"></p>
+
+        <p class="switch-text">
+          Já tem conta? <a href="index.html" class="switch-link">Entrar</a>
+        </p>
+      </form>
+
+      <button onclick="togglePainel()" class="btn-acesso" id="botao-acesso" aria-label="Abrir opções de acessibilidade">🛠️ Acessibilidade</button>
+
+      <div id="painel-acessibilidade" class="oculto" aria-hidden="true" aria-label="Painel de acessibilidade">
+        <h3>Acessibilidade</h3>
+        <button onclick="toggleFonte()">🅰️ Fonte</button>
+        <button onclick="toggleFonteLegivel()">🔤 Tipo</button>
+        <button onclick="modoContraste()">🌗 Contraste</button>
+        <button onclick="mascaraLeitura()">🕶️ Máscara</button>
+        <button onclick="guiaLeitura()">📏 Guia</button>
+        <button onclick="ativarLupa()">🔍 Lupa</button>
+        <button onclick="cursorGrande()">🖱️ Cursor</button>
+        <button onclick="controleVoz()">🎙️ Voz</button>
+        <button onclick="ativarVLibras()">🤟 LIBRAS</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/register.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+</body>
+</html>

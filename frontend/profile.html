@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil Prismatask</title>
+
+  <link rel="stylesheet" href="css/estilo.css" />
+  <script type="module" src="js/profile.js"></script>
+  <script defer src="js/acessibilidade.js"></script>
+</head>
+
+<body>
+
+  <aside aria-label="Painel de acessibilidade">
+    <button onclick="togglePainel()" class="btn-acesso" id="botao-acesso">🛠️ Acessibilidade</button>
+
+    <div id="painel-acessibilidade" class="oculto" aria-hidden="true">
+      <h3>Acessibilidade</h3>
+      <button onclick="toggleFonte()">🅰️ Fonte</button>
+      <button onclick="toggleFonteLegivel()">🔤 Tipo</button>
+      <button onclick="modoContraste()">🌗 Contraste</button>
+      <button onclick="mascaraLeitura()">🕶️ Máscara</button>
+      <button onclick="guiaLeitura()">📏 Guia</button>
+      <button onclick="ativarLupa()">🔍 Lupa</button>
+      <button onclick="cursorGrande()">🖱️ Cursor</button>
+      <button onclick="controleVoz()">🎙️ Voz</button>
+      <button onclick="ativarVLibras()">🤟 LIBRAS</button>
+    </div>
+  </aside>
+
+  
+  <main class="profile-screen">
+    <section class="branding">
+      <img src="assets/logo-prismatask.png" alt="Logo Prismatask" class="logo" />
+      <h1 class="app-name">prismatask</h1>
+      <div class="tagline-container">
+        <span class="asterisk" aria-hidden="true">✦</span>
+        <p class="tagline">Bem-vinda, Letícia!</p>
+      </div>
+    </section>
+
+    <section class="profile-info" aria-label="Informações do perfil">
+      <h2>Perfil do Usuário</h2>
+      <p><strong>E-mail:</strong> <span id="email" aria-live="polite">Carregando...</span></p>
+      <p><strong>Status:</strong> <span id="status" aria-live="polite">Carregando...</span></p>
+
+      
+      <button id="logout-btn" class="btn-logout">Sair</button>
+    </section>
+  </main>
+</body>
+</html>
