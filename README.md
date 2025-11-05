@@ -1,9 +1,4 @@
-Abaixo está um modelo de README.md já adaptado para o seu novo repositório “Prismatask”, que agora contém:
 
-• backend/ – o antigo prismatask-api  
-• frontend/ – o antigo prismatask-login 
-
-Copie o conteúdo para um arquivo chamado README.md na raiz do projeto, ajuste o que achar necessário (por exemplo, portas, tecnologias exatas, prints de tela) e faça o commit/push normalmente.
 
 ```markdown
 # Prismatask – Monorepo (Backend + Frontend)
